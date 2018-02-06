@@ -1,47 +1,292 @@
 <extend name="Base/common"/>
 
-<block name="header">
-    <header class="jumbotron subhead" id="overview">
-        <div class="container">
-            <h2>源自相同起点，演绎不同精彩！</h2>
-            <p class="lead"></p>
-        </div>
-    </header>
-</block>
-
-<block name="side">
-<!-- 左侧 nav
-================================================== -->
-    <div class="span3 bs-docs-sidebar">
-        <ul class="nav nav-list bs-docs-sidenav">
-            {:W('Category/lists', array(1, true))}
-        </ul>
-    </div>
-</block>
-
 <block name="body">
-    <div class="span9">
-        <!-- Contents
-        ================================================== -->
-        <section id="contents">
-            <article:list name="article" category="1" child="true">
-                <div class="">
-                    <h3><a href="{:U('Article/detail?id='.$article['id'])}">{$article.title}</a></h3>
+    <div class="home-container">
+        <div class="home-head">
+            <div class="video-kuang">
+                <video src="../Static/video/video2.mp4" class="home-video" muted="muted" width="1920" autoplay="autoplay" height="818" loop="loop"></video>
+            </div>
+            <div class="home-head-content">
+                <div class="home-head-title">
+                    <h2>全国首创</h2>
+                    <div class="title-line"></div>
+                    <p>以科技打造中国防走失预警平台</p>
                 </div>
-                <div>
-                    <p class="lead">{$article.description}</p>
+                <div class="home-head-bottom">
+                    <a href="javascript:0"><img src="../Static/image/apple.png"></a>
+                    <a href="javascript:0"><img src="../Static/image/android.png"></a>
+                    <a href="javascript:0"><img src="../Static/image/small.png"></a>
                 </div>
-                <div>
-                    <span><a href="{:U('Article/detail?id='.$article['id'])}">查看全文</a></span>
-                    <span class="pull-right">
-                        <span class="author">{$article.uid|get_username}</span>
-                        <span>于 {$article.create_time|date='Y-m-d H:i',###}</span> 发表在 <span>
-                        <a href="{:U('Article/lists?category='.get_category_name($article['category_id']))}">{$article.category_id|get_category_title}</a></span> ( 阅读：{$article.view} )
-                    </span>
+            </div>
+        </div>
+        <div class="home-chain">
+            <div class="chain-container">
+                <div class="common-head">
+                    <h2>三大产品体系 打造“身份码”生态产业链</h2>
+                    <p>老人/儿童 宠物 寻物</p>
                 </div>
-                <hr/>
-            </article:list>
+                <div class="chain-table">
+                    <ul class="nav nav-tabs" id="myTab">
+                        <li class="active"><a href="#elder">老人防走失</a></li>
+                        <li><a href="#child">儿童防走失</a></li>
+                        <li><a href="#pet">宠物防丢</a></li>
+                        <li><a href="#goods">物品标记</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="elder">
+                            <div class="pane-img">
+                                <img src="../Static/image/elder1.jpg">
+                                <img src="../Static/image/elder2.jpg">
+                            </div>
+                            <div class="pane-content">
+                                <h2>老人定位帖</h2>
+                                <p>如果老人发生走失，家人可在钦家APP平台一键发布紧急求助，平台通过一呼百应，逐级推送功能，响应全城帮助寻找，当路人发现走失老人并扫描衣服上的二维码定位帖时，可立即电话联系家人告诉老人所在位置，也可以选择给家人留言，提供线索</p>
+                                <div class="pane-btn">
+                                    <a href="javascript:0">了解更多</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="child">
+                            <div class="pane-img">
+                                <img src="../Static/image/goods1.jpg">
+                                <img src="../Static/image/goods2.jpg">
+                            </div>
+                            <div class="pane-content">
+                                <h2>儿童防走失</h2>
+                                <p>如果老人发生走失，家人可在钦家APP平台一键发布紧急求助，平台通过一呼百应，逐级推送功能，响应全城帮助寻找，当路人发现走失老人并扫描衣服上的二维码定位帖时，可立即电话联系家人告诉老人所在位置，也可以选择给家人留言，提供线索</p>
+                                <div class="pane-btn">
+                                    <a href="javascript:0">了解更多</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="pet">
+                            <div class="pane-img">
+                                <img src="../Static/image/pet1.jpg">
+                                <img src="../Static/image/pet2.jpg">
+                            </div>
+                            <div class="pane-content">
+                                <h2>宠物防丢</h2>
+                                <p>如果老人发生走失，家人可在钦家APP平台一键发布紧急求助，平台通过一呼百应，逐级推送功能，响应全城帮助寻找，当路人发现走失老人并扫描衣服上的二维码定位帖时，可立即电话联系家人告诉老人所在位置，也可以选择给家人留言，提供线索</p>
+                                <div class="pane-btn">
+                                    <a href="javascript:0">了解更多</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="goods">
+                            <div class="pane-img">
+                                <img src="../Static/image/goods1.jpg">
+                                <img src="../Static/image/goods2.jpg">
+                            </div>
+                            <div class="pane-content">
+                                <h2>物品标记</h2>
+                                <p>如果老人发生走失，家人可在钦家APP平台一键发布紧急求助，平台通过一呼百应，逐级推送功能，响应全城帮助寻找，当路人发现走失老人并扫描衣服上的二维码定位帖时，可立即电话联系家人告诉老人所在位置，也可以选择给家人留言，提供线索</p>
+                                <div class="pane-btn">
+                                    <a href="javascript:0">了解更多</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        </section>
+        </div>
+        <div class="home-frid">
+            <div class="frid-title">
+                <div class="common-head">
+                    <h2>物联网新科技——智能RFID身份标识</h2>
+                    <p>RFID——比身份证还高效便捷的个人身份信息标识，物联网发展关键技术</p>
+                </div>
+            </div>
+            <div class="frid-content">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="banner-img">
+                                <img src="../Static/image/frid.jpg">
+                            </div>
+                            <div class="banner-text">
+                                <div class="h-line"></div>
+                                <h2>RFID</h2>
+                                <p>拥有快速识别、体积小、形状多样、耐久抗污、可重复使用、容量大、穿透性强、安全保密等特性，在门禁进出管理，人员精确定位，区域定位管理，周界管理，电子围栏及安防报警灯领域发挥重要作用。</p>
+                                <p>目前，钦家证投入大量人力物力试点研究、落地RFID技术，并把它应用于防走失领域。</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="banner-img">
+                                <img src="../Static/image/frid.jpg">
+                            </div>
+                            <div class="banner-text">
+                                <div class="h-line"></div>
+                                <h2>RFID</h2>
+                                <p>拥有快速识别、体积小、形状多样、耐久抗污、可重复使用、容量大、穿透性强、安全保密等特性，在门禁进出管理，人员精确定位，区域定位管理，周界管理，电子围栏及安防报警灯领域发挥重要作用。</p>
+                                <p>目前，钦家证投入大量人力物力试点研究、落地RFID技术，并把它应用于防走失领域。</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="banner-img">
+                                <img src="../Static/image/frid.jpg">
+                            </div>
+                            <div class="banner-text">
+                                <div class="h-line"></div>
+                                <h2>RFID</h2>
+                                <p>拥有快速识别、体积小、形状多样、耐久抗污、可重复使用、容量大、穿透性强、安全保密等特性，在门禁进出管理，人员精确定位，区域定位管理，周界管理，电子围栏及安防报警灯领域发挥重要作用。</p>
+                                <p>目前，钦家证投入大量人力物力试点研究、落地RFID技术，并把它应用于防走失领域。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination" style="margin-left: 130px"></div>
+                </div>
+            </div>
+        </div>
+        <div class="home-app">
+            <div class="app-content">
+                <div class="app-title">
+                    <div class="common-head">
+                        <h2>钦家APP，保护家人安全，与你并肩作战</h2>
+                        <p>一键发布求助，13亿热心人士帮助寻找，让TA早日与您团聚</p>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-number">
+                        <p>防走失定位帖累计已经帮助<span>90699</span>位阿尔兹海</p>
+                        <p>默症患者，覆盖全国<span>84</span>个城市</p>
+                    </div>
+                    <div class="app-bottom">
+                        <div class="app-new">
+                            <div class="app-new-left"><span>686</span>人发布求助</div>
+                            <div class="app-new-right">
+                                <a href="javascript:0" >
+                                    <div class="new-item">
+                                        <div class="item-pic">
+                                            <img src="../Static/image/member.jpg">
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="item-head">Victordan</div>
+                                            <p>2017.12.12 发布求助 走失老人</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:0" >
+                                    <div class="new-item">
+                                        <div class="item-pic">
+                                            <img src="../Static/image/member.jpg">
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="item-head">Victordan</div>
+                                            <p>2017.12.12 发布求助 走失老人</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:0" >
+                                    <div class="new-item">
+                                        <div class="item-pic">
+                                            <img src="../Static/image/member.jpg">
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="item-head">Victordan</div>
+                                            <p>2017.12.12 发布求助 走失老人</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="app-new">
+                            <div class="app-new-left"><span>686</span>人发布求助</div>
+                            <div class="app-new-right">
+                                <a href="javascript:0" >
+                                    <div class="new-item">
+                                        <div class="item-pic">
+                                            <img src="../Static/image/member.jpg">
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="item-head">Victordan</div>
+                                            <p>2017.12.12 发布求助 走失老人</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:0" >
+                                    <div class="new-item">
+                                        <div class="item-pic">
+                                            <img src="../Static/image/member.jpg">
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="item-head">Victordan</div>
+                                            <p>2017.12.12 发布求助 走失老人</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:0" >
+                                    <div class="new-item">
+                                        <div class="item-pic">
+                                            <img src="../Static/image/member.jpg">
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="item-head">Victordan</div>
+                                            <p>2017.12.12 发布求助 走失老人</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="app-new">
+                            <div class="app-new-left"><span>686</span>人发布求助</div>
+                            <div class="app-new-right">
+                                <a href="javascript:0" >
+                                    <div class="new-item">
+                                        <div class="item-pic">
+                                            <img src="../Static/image/member.jpg">
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="item-head">Victordan</div>
+                                            <p>2017.12.12 发布求助 走失老人</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:0" >
+                                    <div class="new-item">
+                                        <div class="item-pic">
+                                            <img src="../Static/image/member.jpg">
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="item-head">Victordan</div>
+                                            <p>2017.12.12 发布求助 走失老人</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:0" >
+                                    <div class="new-item">
+                                        <div class="item-pic">
+                                            <img src="../Static/image/member.jpg">
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="item-head">Victordan</div>
+                                            <p>2017.12.12 发布求助 走失老人</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
+</block>
+<block name="script">
+    <script>
+        $(document).ready(function () {
+            var mySwiper = new Swiper('.swiper-container', {
+                autoplay: 5000,
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+            });
+
+            $('#myTab a').click(function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+        });
+    </script>
 </block>
