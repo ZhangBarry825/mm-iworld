@@ -30,4 +30,16 @@ class IndexController extends HomeController {
         $this->display();
     }
 
+    public function call(){
+        $this->display();
+    }
+
+    public function used(){
+        $this->display();
+    }
+
+    public function brand(){
+        $this->display();
+    }
+
 }
