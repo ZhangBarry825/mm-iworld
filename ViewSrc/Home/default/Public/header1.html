@@ -6,7 +6,8 @@
         <div class="hd-nav">
             <think:nav name="nav">
                 <eq name="nav.pid" value="0">
-                    <a class="nav-item" href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">{$nav.title}</a>
+                    <a class="nav-item" href="{$nav.url|get_nav_url}"
+                       target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">{$nav.title}</a>
                 </eq>
             </think:nav>
         </div>
@@ -49,10 +50,7 @@
             <p>法律声明</p>
         </a>
     </div>
-
-
-
-
-
-
+</div>
+<div class="crumb">
+    <p><a href="javascript:0">钦家首页</a> > <a href="javascript:0">关于钦家</a> > <a href="javascript:0">品牌故事</a> </p>
 </div>

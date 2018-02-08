@@ -42,4 +42,20 @@ class IndexController extends HomeController {
         $this->display();
     }
 
+    public function skill(){
+        $this->display();
+    }
+
+    public function patent(){
+        $this->display();
+    }
+
+    public function addwe(){
+        $this->display();
+    }
+
+    public function service(){
+        $this->display();
+    }
+
 }
