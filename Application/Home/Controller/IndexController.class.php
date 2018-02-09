@@ -30,19 +30,19 @@ class IndexController extends HomeController {
         $this->display();
     }
 
-    public function call(){
+    public function rescue(){
         $this->display();
     }
 
-    public function used(){
+    public function instructions(){
         $this->display();
     }
 
-    public function brand(){
+    public function introduction(){
         $this->display();
     }
 
-    public function skill(){
+    public function technology(){
         $this->display();
     }
 
@@ -50,11 +50,23 @@ class IndexController extends HomeController {
         $this->display();
     }
 
-    public function addwe(){
+    public function join_us(){
         $this->display();
     }
 
-    public function service(){
+    public function center(){
+        $this->display();
+    }
+
+    public function product_elder(){
+        $this->display();
+    }
+
+    public function product_child(){
+        $this->display();
+    }
+
+    public function product_pet(){
         $this->display();
     }
 
