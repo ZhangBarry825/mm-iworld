@@ -6,7 +6,13 @@
         <div class="hd-nav">
             <think:nav name="nav">
                 <eq name="nav.pid" value="0">
-                    <a class="nav-item" href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">{$nav.title}</a>
+                    <eq name="nav.title" value="$focus">
+                        <a class="nav-item nav-focus" href="{$nav.url|get_nav_url}"
+                           target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">{$nav.title}</a>
+                        <else/>
+                        <a class="nav-item" href="{$nav.url|get_nav_url}"
+                           target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">{$nav.title}</a>
+                    </eq>
                 </eq>
             </think:nav>
         </div>
