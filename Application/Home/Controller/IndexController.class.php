@@ -8,6 +8,8 @@
 // +----------------------------------------------------------------------
 
 namespace Home\Controller;
+use Home\Model\CategoryModel;
+use Home\Model\DocumentModel;
 use OT\DataDictionary;
 
 /**
@@ -16,18 +18,34 @@ use OT\DataDictionary;
  */
 class IndexController extends HomeController {
 
-	//系统首页
+    //系统首页
     public function index(){
-
-//        $category = D('Category')->getTree();
-//        $lists    = D('Document')->lists(null);
-//
 //        $this->assign('category',$category);//栏目
 //        $this->assign('lists',$lists);//列表
 //        $this->assign('page',D('Document')->page);//分页
 
-
+        $Document = D('Document');
+        $Category = M('Category');
+        //媒体报道
+        $mtbd_id = $Category->field('id')->where("name = 'mtbd'")->find();
+        $mtbd_list =$Document->lists($mtbd_id['id']);
+        //钦家新闻
+        $qjxw_id = $Category->field('id')->where("name = 'qjxw'")->find();
+        $qjxw_list =$Document->lists($qjxw_id['id']);
+        //公益活动
+        $gybd_id = $Category->field('id')->where("name = 'gybd'")->find();
+        $gybd_list =$Document->lists($gybd_id['id']);
+        $public=(int)(count($gybd_list)/6);
+        if ($public>3)$public=3;
+        $public_list=[];
+        for ($i=0; $i<$public; $i++) {
+            $public_list[$i]=$i;
+        }
         $this->assign('focus',"首页");
+        $this->assign('mtbd_list',$mtbd_list);
+        $this->assign('qjxw_list',$qjxw_list);
+        $this->assign('gybd_list',$gybd_list);
+        $this->assign('public_list',$public_list);
         $this->display();
     }
 

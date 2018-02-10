@@ -297,7 +297,7 @@ class ArticleController extends AdminController {
 		if(!is_null($group_id)){
 			$map['group_id']	=	$group_id;
 		}
-        $list = $this->lists($Document,$map,'level DESC,DOCUMENT.id DESC',$field);
+        $list = $this->lists($Document,$map,'level DESC,DOCUMENT.create_time DESC',$field);
 
         if($map['pid']){
             // 获取上级文档

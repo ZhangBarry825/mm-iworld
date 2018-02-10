@@ -1,41 +1,32 @@
 <extend name="Base/common"/>
-
-<block name="header">
-	<header class="jumbotron subhead" id="overview">
-		<div class="container">
-			<h2>源自相同起点，演绎不同精彩！</h2>
-			<p class="lead"></p>
-		</div>
-	</header>
-</block>
-
 <block name="body">
-      <div class="span9">
-        <!-- Contents
-        ================================================== -->
-        <section id="contents">
-
-			<volist name="list" id="data">
-				<div class="">
-					<h3 class="ellipsis"><a href="{:U('Article/detail?id='.$data['id'])}">{$data.title}</a></h3>
+	<div class="lists-container">
+		<div class="lists-head">
+			<div class="lists-head-content">
+				<h4>钦家动态</h4>
+				<p>第一时间了解钦家最新消息</p>
+				<div class="lists-head-bottom">
+					<a href="{:U('Index/index')}">钦家首页</a><span> &gt; </span><a href="javascript:0">钦家动态</a>
 				</div>
-				<div>
-					<p class="lead">{$data.description}</p>
+			</div>
+		</div>
+		<div class="lists-body">
+			<volist name="list" id="vo">
+				<div class="lists-item">
+					<a href="{:U('Article/detail?id='.$vo['id'])}">
+						<div class="lists-item-left" style="background: url({:get_cover($vo['cover_id'],$field = path)});background-size: cover;background-repeat: no-repeat;background-position: center center">
+						</div>
+						<div class="lists-item-right">
+							<p>{$vo.create_time|date='Y-m-d H:i:s',###}</p>
+							<h2>{$vo.title}</h2>
+							<p>{$vo.description}</p>
+						</div>
+					</a>
 				</div>
-				<div>
-					<span><a href="{:U('Article/detail?id='.$data['id'])}">查看全文</a></span>
-					<span class="pull-right">
-						<span class="author">{$data.uid|get_username}</span>&nbsp;&nbsp;
-						<span>发表于 {$data.create_time|date='Y-m-d H:i:s',###}</span>
-						<span>阅读({$data.view})</span>&nbsp;&nbsp;
-                    </span>
-				</div>
-				<hr/>
-	        </volist>
-
-            <div class="onethink pagination pagination-right pagination-large">
-                <article:page cate="$category['id']" listrow="$category['list_row']" />
-            </div>
-        </section>
-      </div>
+			</volist>
+			<div class="onethink fenye">
+				<article:page cate="$category['id']" listrow="10" />
+			</div>
+		</div>
+	</div>
 </block>

@@ -28,23 +28,41 @@ class ArticleController extends HomeController {
 		$this->display($category['template_index']);
 	}
 
-	/* 文档模型列表页 */
-	public function lists($p = 1){
+	/* 文档模型多列表页 */
+	public function lists_all($p = 1){
 		/* 分类信息 */
-		$category = $this->category();
-
+		$category = $this->category_lists();
 		/* 获取当前分类列表 */
 		$Document = D('Document');
-		$list = $Document->page($p, $category['list_row'])->lists($category['id']);
+        $list = $Document->page($p, 10)->lists($category['id']);
 		if(false === $list){
 			$this->error('获取列表数据失败！');
 		}
-
 		/* 模板赋值并渲染模板 */
 		$this->assign('category', $category);
 		$this->assign('list', $list);
-		$this->display($category['template_lists']);
+		$this->assign('focus', '钦家动态');
+		$this->display('lists');
 	}
+
+    /* 文档模型列表 */
+    public function lists($p = 1){
+        /* 分类信息 */
+        $category = $this->category();
+
+        /* 获取当前分类列表 */
+        $Document = D('Document');
+        $list = $Document->page($p, $category['list_row'])->lists($category['id']);
+        if(false === $list){
+            $this->error('获取列表数据失败！');
+        }
+
+        /* 模板赋值并渲染模板 */
+        $this->assign('focus', '钦家动态');
+        $this->assign('category', $category);
+        $this->assign('list', $list);
+        $this->display($category['template_lists']);
+    }
 
 	/* 文档模型详情页 */
 	public function detail($id = 0, $p = 1){
@@ -87,28 +105,52 @@ class ArticleController extends HomeController {
 		$this->display($tmpl);
 	}
 
-	/* 文档分类检测 */
-	private function category($id = 0){
+	/* 多文档分类检测 */
+	private function category_lists($id1 = 0,$id2=0){
 		/* 标识正确性检测 */
-		$id = $id ? $id : I('get.category', 0);
-		if(empty($id)){
+		$id1 = $id1 ? $id1 : I('get.c1', 0);
+		$id2 = $id2 ? $id2 : I('get.c2', 0);
+
+		if(empty($id1)&&empty($id2)){
 			$this->error('没有指定文档分类！');
 		}
 
 		/* 获取分类信息 */
-		$category = D('Category')->info($id);
-		if($category && 1 == $category['status']){
-			switch ($category['display']) {
-				case 0:
-					$this->error('该分类禁止显示！');
-					break;
-				//TODO: 更多分类显示状态判断
-				default:
-					return $category;
-			}
-		} else {
-			$this->error('分类不存在或被禁用！');
-		}
+		$category=[];
+		$category['c1'] = D('Category')->info($id1);
+		$category['c2'] = D('Category')->info($id2);
+		foreach ($category as $val){
+            if($val && 1 == $val['status']){
+                if($val['display']==0)$this->error('该分类禁止显示！');
+            } else {
+                $this->error('分类不存在或被禁用！');
+            }
+        }
+        return $category;
 	}
+
+    /* 文档分类检测 */
+    private function category($id = 0){
+        /* 标识正确性检测 */
+        $id = $id ? $id : I('get.category', 0);
+        if(empty($id)){
+            $this->error('没有指定文档分类！');
+        }
+
+        /* 获取分类信息 */
+        $category = D('Category')->info($id);
+        if($category && 1 == $category['status']){
+            switch ($category['display']) {
+                case 0:
+                    $this->error('该分类禁止显示！');
+                    break;
+                //TODO: 更多分类显示状态判断
+                default:
+                    return $category;
+            }
+        } else {
+            $this->error('分类不存在或被禁用！');
+        }
+    }
 
 }
