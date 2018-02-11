@@ -95,4 +95,19 @@ return array(
         'callback' => false, //检测文件是否存在回调函数，如果存在返回文件信息数组
     ), //附件上传配置（文件上传类配置）
 
+//    'URL_ROUTER_ON'   => true,
+//    'URL_MAP_RULES'=>array(
+//        'index' => 'index/index?_',
+//        'center' => 'index/center?_',
+//        'instructions' => 'index/instructions?_',
+//        'introduction' => 'index/introduction?_',
+//        'join_us' => 'index/join_us?_',
+//        'patent' => 'index/patent?_',
+//        'product_child' => 'index/product_child?_',
+//        'product_elder' => 'index/product_elder?_',
+//        'product_pet' => 'index/product_pet?_',
+//        'rescue' => 'index/rescue?_',
+//        'technology' => 'index/technology?_',
+//    )
+
 );
