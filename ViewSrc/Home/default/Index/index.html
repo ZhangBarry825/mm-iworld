@@ -517,48 +517,48 @@
                 </div>
                 <div class="home-media-bd">
                     <div class="media-items">
-                        <a href="http://www.cctv.com/" rel="nofollow">
+                        <a href="http://www.cctv.com/" rel="nofollow" target="_blank">
                             <img src="../Static/image/bottom-logo1.png">
                         </a>
-                        <a href="http://www.iqiyi.com/" rel="nofollow">
+                        <a href="http://www.iqiyi.com/" rel="nofollow" target="_blank">
                             <img src="../Static/image/bottom-logo2.png">
                         </a>
-                        <a href="http://www.china.com.cn/" rel="nofollow">
+                        <a href="http://www.china.com.cn/" rel="nofollow" target="_blank">
                             <img src="../Static/image/bottom-logo3.png">
                         </a>
-                        <a href="http://www.xinmin.cn/" rel="nofollow">
+                        <a href="http://www.xinmin.cn/" rel="nofollow" target="_blank">
                             <img src="../Static/image/bottom-logo4.png">
                         </a>
-                        <a href="http://www.gmw.cn/" rel="nofollow">
+                        <a href="http://www.gmw.cn/" rel="nofollow" target="_blank">
                             <img src="../Static/image/bottom-logo5.png">
                         </a>
-                        <a href="http://www.people.com.cn/" rel="nofollow">
+                        <a href="http://www.people.com.cn/" rel="nofollow" target="_blank">
                             <img src="../Static/image/bottom-logo6.png">
                         </a>
-                        <a href="http://www.xinhuanet.com/" rel="nofollow">
+                        <a href="http://www.xinhuanet.com/" rel="nofollow" target="_blank">
                             <img src="../Static/image/bottom-logo7.png">
                         </a>
                     </div>
                     <div class="media-items">
-                        <a href="https://www.sohu.com/" rel="nofollow">
+                        <a href="https://www.sohu.com/" rel="nofollow" target="_blank">
                             <img src="../Static/image/bottom-logo8.png">
                         </a>
-                        <a href="http://www.163.com/" rel="nofollow">
+                        <a href="http://www.163.com/" rel="nofollow" target="_blank">
                             <img src="../Static/image/bottom-logo9.png">
                         </a>
-                        <a href="http://www.ifeng.com/" rel="nofollow">
+                        <a href="http://www.ifeng.com/" rel="nofollow" target="_blank">
                             <img src="../Static/image/bottom-logo10.png">
                         </a>
-                        <a href="http://www.huanqiu.com/" rel="nofollow">
+                        <a href="http://www.huanqiu.com/" rel="nofollow" target="_blank">
                             <img src="../Static/image/bottom-logo11.png">
                         </a>
-                        <a href="http://www.sina.com.cn/" rel="nofollow">
+                        <a href="http://www.sina.com.cn/" rel="nofollow" target="_blank">
                             <img src="../Static/image/bottom-logo12.png">
                         </a>
-                        <a href="http://www.china.com/" rel="nofollow">
+                        <a href="http://www.china.com/" rel="nofollow" target="_blank">
                             <img src="../Static/image/bottom-logo13.png">
                         </a>
-                        <a href="http://www.qq.com/" rel="nofollow">
+                        <a href="http://www.qq.com/" rel="nofollow" target="_blank">
                             <img src="../Static/image/bottom-logo14.png">
                         </a>
                     </div>
@@ -569,7 +569,24 @@
 </block>
 <block name="script">
     <script>
+        $(window).resize(function () {
+            if ($(window).height()-100<700)
+            {
+                $('.home-head').css("height",700-100);
+            }
+            else{
+                $('.home-head').css("height",$(window).height()-100);
+            }
+        });
         $(document).ready(function () {
+            if ($(window).height()-100<700)
+            {
+                $('.home-head').css("height",700-100);
+            }
+            else{
+                $('.home-head').css("height",$(window).height()-100);
+            }
+
             var mySwiper = new Swiper('.banner1', {
                 autoplay: 5000,
                 pagination: '.swiper-pagination',
