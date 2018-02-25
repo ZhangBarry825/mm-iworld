@@ -26,6 +26,11 @@ class HomeController extends Controller {
         /* 读取站点配置 */
         $config = api('Config/lists');
         C($config); //添加配置
+        //如果是手机自动切换模板
+        if (is_mobile()) {
+            //设置默认默认主题为 Mobile
+            C('DEFAULT_THEME','mobile');
+        }
 
         if(!C('WEB_SITE_CLOSE')){
             $this->error('站点已经关闭，请稍后访问~');
