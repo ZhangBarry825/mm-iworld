@@ -16,9 +16,9 @@
                     <p>以科技打造中国防走失预警平台</p>
                 </div>
                 <div class="home-head-bottom">
-                    <a href="http://common.m-talk.mobi/mtalk/popularize.html"><img src="../Static/image/apple.png"></a>
-                    <a href="http://common.m-talk.mobi/mtalk/popularize.html"><img src="../Static/image/android.png"></a>
-                    <a href="/Public/Home/images/xiao.jpg"><img src="../Static/image/small.png"></a>
+                    <a href="http://common.m-talk.mobi/mtalk/popularize.html" target="_blank"><img src="../Static/image/apple.png"></a>
+                    <a href="http://common.m-talk.mobi/mtalk/popularize.html" target="_blank"><img src="../Static/image/android.png"></a>
+                    <a href="/Public/Home/images/xiao.jpg" target="_blank"><img src="../Static/image/small.png"></a>
                 </div>
             </div>
         </div>
@@ -467,14 +467,14 @@
                 <div class="dynamic-body">
                     <div class="dynamic-items">
                         <div class="items-hd">
-                            <a href="{:U('Article/lists?category=mtbd')}">
+                            <a href="/mtbd">
                                 更多 >
                             </a>
                             <span>媒体报道</span>
                         </div>
                         <volist name="mtbd_list" id="vo" offset="0" length='4'>
                             <div class="items-bd">
-                                <a href="{:U('Article/detail?id='.$vo['id'])}" class="item">
+                                <a href="{:U('news/'.$vo['id'])}" class="item">
                                     <h4 class="item-title">
                                        {$vo.title}
                                     </h4>
@@ -487,7 +487,7 @@
                     </div>
                     <div class="dynamic-items">
                         <div class="items-hd">
-                            <a href="{:U('Article/lists?category=qjxw')}">
+                            <a href="/qjxw">
                                 更多 >
                             </a>
                             <span>钦家新闻</span>

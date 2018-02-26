@@ -114,10 +114,12 @@ class ArticleController extends HomeController {
 	}
 
 	/* 多文档分类检测 */
-	private function category_lists($id1 = 0,$id2=0){
+	private function category_lists(){
 		/* 标识正确性检测 */
-		$id1 = $id1 ? $id1 : I('get.c1', 0);
-		$id2 = $id2 ? $id2 : I('get.c2', 0);
+		$id1=0;
+        $id2=0;
+		$id1 = $id1 ? $id1 : 'mtbd';
+		$id2 = $id2 ? $id2 : 'qjxw';
 
 		if(empty($id1)&&empty($id2)){
 			$this->error('没有指定文档分类！');

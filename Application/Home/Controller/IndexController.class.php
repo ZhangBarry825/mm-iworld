@@ -91,14 +91,17 @@ class IndexController extends HomeController {
     }
 
     public function product_elder(){
+        $this->assign('focus',"老人定位贴");
         $this->display();
     }
 
     public function product_child(){
+        $this->assign('focus',"儿童定位贴");
         $this->display();
     }
 
     public function product_pet(){
+        $this->assign('focus',"宠物定位贴");
         $this->display();
     }
 

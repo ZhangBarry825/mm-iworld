@@ -108,7 +108,14 @@ return array(
         'product_pet' => 'Index/product_pet?_',
         'rescue' => 'Index/rescue?_',
         'technology' => 'Index/technology?_',
-        'lists_all' => 'Article/lists_all?c1=mtbd&c2=qjxw',
-    )
+        'lists_all' => 'Article/lists_all',
+        'qjxw' => 'Article/lists?category=qjxw',
+        'mtbd' => 'Article/lists?category=mtbd',
+    ),
+    'URL_ROUTE_RULES'=>array(
+        'news/:id'               => 'Article/detail',
+        'lists_all/:p'               => 'Article/lists_all',
+        'lists/:category/:p'               => 'Article/lists',
+    ),
 
 );
