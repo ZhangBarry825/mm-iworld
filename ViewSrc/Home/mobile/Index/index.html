@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <include file="Public/head"/>
     <title>钦家 | 一种爱的方式</title>
@@ -19,7 +19,7 @@
             <div class="home-head-bottom">
                 <a href="http://common.m-talk.mobi/mtalk/popularize.html"><img src="../Public/image/app.png"></a>
                 <a href="http://common.m-talk.mobi/mtalk/popularize.html"><img src="../Public/image/and.png"></a>
-                <a href="javascript:0"><img src="../Public/image/little.png"></a>
+                <a href="/Public/Home/images/xiao.jpg"><img src="../Public/image/little.png"></a>
             </div>
         </div>
     </div>
@@ -77,6 +77,35 @@
             </div>
         </div>
     </div>
+    <div class="home-app">
+        <div class="common-head">
+            <h2>钦家APP，保护家人安全，与你并肩作战</h2>
+            <p>一键发布求助，13亿热心人士帮助寻找，让TA早日与您团聚</p>
+        </div>
+        <div class="app-gif">
+        </div>
+    </div>
+    <div class="home-public">
+        <div class="common-head">
+            <h2>公益同行，我们一直在「爱」的路上</h2>
+            <p>钦家携手中国人口服福利基金会，开展黄手环行动，帮助更多的走失者回家!</p>
+        </div>
+        <div class="public-content">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <volist name="gybd_list" id="vo" offset="0" length='8'>
+                        <div class="swiper-slide">
+                            <a href="{:U('Article/detail?id='.$vo['id'])}">
+                                <img src="{:get_cover($vo['cover_id'],$field = path)}">
+                                <p> {$vo.title}</p>
+                            </a>
+                        </div>
+                    </volist>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include file="Public/footer"/>
 </div>
 </body>
 <script>
@@ -85,6 +114,16 @@
             e.preventDefault();
             $(this).tab('show');
         });
+
+        var swiper = new Swiper('.swiper-container', {
+            // scrollbar: '.swiper-scrollbar',
+            // scrollbarHide: true,
+            slidesPerView: 'auto',
+            // centeredSlides: true,
+            spaceBetween: 15,
+            grabCursor: true
+        });
+
     });
 </script>
 </html>

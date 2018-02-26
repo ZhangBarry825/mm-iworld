@@ -52,7 +52,7 @@ class ArticleController extends HomeController {
 
         /* 获取当前分类列表 */
         $Document = D('Document');
-        $list = $Document->page($p, $category['list_row'])->lists($category['id']);
+        $list = $Document->page($p, 10)->lists($category['id']);
         if(false === $list){
             $this->error('获取列表数据失败！');
         }
@@ -81,6 +81,14 @@ class ArticleController extends HomeController {
 		if(!$info){
 			$this->error($Document->getError());
 		}
+        $previnfo=$Document->prev($info);
+        $nextinfo=$Document->next($info);
+        /* 上一篇标题 */
+        $this->assign('prev_title',$nextinfo['title']);
+        $this->assign('prev_id',$nextinfo['id']);
+        /* 下一篇标题 */
+        $this->assign('next_title',$previnfo['title']);
+        $this->assign('next_id',$previnfo['id']);
 
 		/* 分类信息 */
 		$category = $this->category($info['category_id']);
