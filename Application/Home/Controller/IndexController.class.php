@@ -105,4 +105,10 @@ class IndexController extends HomeController {
         $this->display();
     }
 
+    public function law(){
+        $this->assign('focus',"关于钦家");
+        $this->assign('column',"法律声明");
+        $this->display();
+    }
+
 }

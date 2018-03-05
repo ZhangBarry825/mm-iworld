@@ -108,6 +108,7 @@ return array(
         'product_pet' => 'Index/product_pet?_',
         'rescue' => 'Index/rescue?_',
         'technology' => 'Index/technology?_',
+        'law' => 'Index/law?_',
         'lists_all' => 'Article/lists_all',
         'qjxw' => 'Article/lists?category=qjxw',
         'mtbd' => 'Article/lists?category=mtbd',

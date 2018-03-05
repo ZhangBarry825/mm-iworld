@@ -15,14 +15,14 @@ body {
     margin: 0 auto;
   }
   .hd-logo {
-    width: 329px;
+    width: 309px;
     height: 57px;
     padding-top: 18px;
     float: left;
   }
   .hd-logo img {
     width: 100%;
-    height: 100%;
+    //height: 100%;
   }
   .hd-nav {
     float: right;
@@ -65,18 +65,19 @@ body {
     margin-top: 10px;
   }
   .home-bottom {
-    height: 350px;
+    height: 300px;
     background-color: #fafafa;
     .bottom-content {
       width: 1200px;
-      height: 300px;
+      height: 250px;
       border-bottom: 1px solid #c4c4c4;
       margin: 0 auto;
       .bottom-left {
         float: left;
+        margin-left: 30px;
       }
       .bottom-left img {
-        width: 90%;
+        width: 80%;
         padding-top: 35px;
         padding-bottom: 30px;
       }
@@ -91,9 +92,8 @@ body {
       }
       .bottom-line {
         float: left;
-        height: 250px;
+        height: 200px;
         margin-top: 30px;
-        margin-left: 30px;
         border: 0.5px #c4c4c4 solid;
       }
       .bottom-right {
@@ -134,7 +134,7 @@ body {
           padding-left: 60px;
         }
         .bottom-contact ul li {
-          line-height:2.5;
+          line-height:2;
         }
         .bottom-contact ul:nth-child(1) {
           color: #333333;
@@ -150,7 +150,7 @@ body {
           margin-left: 100px;
           .gz-item {
             width: 80px;
-            margin-top: 40px;
+            margin-top: 20px;
             float: left;
             text-align: center;
           }
@@ -158,8 +158,17 @@ body {
             width: 1000%;
             height: 80px;
           }
+          .gz-item:nth-child(1) img{
+            margin-bottom: 20px;
+          }
           .gz-item p {
             margin-top: 20px;
+          }
+          .gz-item a{
+            color: #333333;
+          }
+          .gz-item a:hover{
+            text-decoration: none;
           }
           .gz-item ~ .gz-item {
             margin-left: 40px;
@@ -301,6 +310,23 @@ body {
       }
       .home-head-title p {
         font-size: 30px;
+        margin-bottom: 5%;
+      }
+      .home-head-title a{
+        color: #FFFFFF;
+        font-size: 16px;
+        padding: 10px 40px;
+        border: 1px solid #FFFFFF;
+
+      }
+      .home-head-title a:hover{
+        text-decoration: none;
+      }
+      .home-head-title a:visited{
+        text-decoration: none;
+      }
+      .home-head-title a:link{
+        text-decoration: none;
       }
       .home-head-bottom {
         position: absolute;
@@ -386,6 +412,7 @@ body {
         .pane-content p {
           color: #999999;
           font-size: 15px;
+          text-align: justify;
         }
         .pane-btn {
           margin-top: 50px;
@@ -446,7 +473,7 @@ body {
           font-weight: normal;
         }
         .banner-text p {
-          line-height: 1.4;
+          line-height: 2;
           color: #8c8c8c;
           font-size: 15px;
           text-align: justify;
@@ -637,7 +664,7 @@ body {
   }
   .home-dynamic {
     width: 100%;
-    height: 780px;
+    height: 770px;
     .dynamic-content {
       width: 1100px;
       height: 700px;
@@ -714,8 +741,14 @@ body {
       height: 370px;
       margin: 0 auto;
       .home-media-hd {
-        padding-top: 50px;
-        padding-bottom: 40px;
+        //padding-top: 50px;
+        //padding-bottom: 40px;
+        .common-head1 h2{
+          padding-left: 50px;
+          font-size: 21px;
+          font-weight: normal;
+          text-align: left;
+        }
       }
       .media-items a:hover{
         text-decoration: none;
@@ -1340,6 +1373,9 @@ body {
     font-size: 16px;
     color: #666666;
   }
+  .patent-content img{
+    width: 100%;
+  }
 }
 
 .addwe-container {
@@ -1512,6 +1548,40 @@ body {
   }
 }
 
+.law-container{
+  width: 900px;
+  margin: 0 auto;
+  .law-head {
+    text-align: center;
+    .law-line {
+      width: 60px;
+      margin: 0 auto;
+      height: 0;
+      border: 1px solid #F84F51;
+      margin-top: 10px;
+    }
+    margin-bottom: 30px;
+  }
+  .law-head h2 {
+    font-size: 25px;
+    color: #000000;
+    font-weight: normal;
+  }
+  .law-content h4{
+    font-size: 20px;
+    color: #000000;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .law-content p{
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  .law-content{
+    padding-bottom: 30px;
+  }
+}
 .elder-container {
   .elder-crumbs {
     width: 1000px;
@@ -1541,7 +1611,7 @@ body {
     .elder-left {
       width: 440px;
       float: left;
-      padding-top: 60px;
+      padding-top: 30px;
     }
     .elder-left h3 {
       font-size: 40px;
@@ -1561,6 +1631,16 @@ body {
       width: 100%;
       height: 100%;
     }
+  }
+  .elder-pic:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .elder-left:after{
+    content: "";
+    display: block;
+    clear: both;
   }
   .elder-status {
     height: 365px;
@@ -1651,6 +1731,44 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+  .product-connect{
+    width: 1000px;
+    margin: 0 auto;
+    .connect-items{
+      width: 100%;
+      height: 300px;
+      .connect-item a{
+        text-decoration: none;
+      }
+      .connect-item a:hover{
+        text-decoration: none;
+      }
+      .connect-item{
+        width: 30%;
+        float: left;
+      }
+      .connect-item p{
+        text-align: center;
+        font-size: 17px;
+        line-height: 1.5;
+        padding-top: 10px;
+        color: #333333;
+      }
+      .connect-item~.connect-item{
+        margin-left: 3.33%;
+      }
+      .connect-item img{
+        width: 100%;
+      }
+    }
+  }
+  .product-connect h2{
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .lists-container {
@@ -1684,7 +1802,7 @@ body {
   .lists-head {
     width: 100%;
     height: 440px;
-    background: url(../image/qjdt.jpg);
+    background: url(../image/qjdt1.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1790,7 +1908,7 @@ body {
   .detail-head{
     .detail-head-crumbs{
       padding-top: 40px;
-      padding-bottom: 60px;
+      padding-bottom: 30px;
     }
     .detail-head-crumbs a{
       font-size: 16px;
@@ -1810,11 +1928,12 @@ body {
     }
     .detail-head-content p{
       font-size: 16px;
+      padding-bottom: 30px;
       color: #888888;
     }
     .detail-head-content h2{
-      padding-top: 20px;
-      padding-bottom: 30px;
+      //padding-top: 20px;
+      //padding-bottom: 30px;
       font-size: 35px;
       font-weight: normal;
     }
