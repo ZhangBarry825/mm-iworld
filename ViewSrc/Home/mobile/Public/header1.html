@@ -62,9 +62,14 @@
             </a>
         </div>
         <div class="nav-item">
-            <a href="javascript:0">
-                <img src="../../default/Static/image/b-6.png">
-                <p>法律声明</p>
+            <a href="{:U('Index/law?_')}">
+                <eq name="column" value="法律声明">
+                    <img src="../../default/Static/image/h-6.png">
+                    <p style="color: #F84F51">法律声明</p>
+                    <else/>
+                    <img src="../../default/Static/image/b-6.png">
+                    <p>法律声明</p>
+                </eq>
             </a>
         </div>
     </div>
