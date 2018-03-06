@@ -2352,3 +2352,59 @@ body {
   }
 }
 
+.modal-mask{
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1200px;
+  height: 100%;
+  background-color: rgba(0,0,0,.4);
+  display: table;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+  .modal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    .modal-container{
+      position: relative;
+      min-width: 300px;
+      max-width: 980px;
+      margin: 0
+      auto;
+      background-color: #fff;
+      border-radius: 2px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.33);
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+      font-family: Helvetica,Arial,sans-serif;
+      width: 800px;
+      height: auto;
+      .modal-close {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: -40px;
+        right: -40px;
+        line-height: 30px;
+        border: 2px
+        solid #fff;
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .modal-body-zero {
+        margin: 0;
+        line-height: 0;
+      }
+    }
+  }
+}
+.hidden {
+  display: none!important;
+}
+
+
