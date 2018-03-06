@@ -104,6 +104,10 @@ class IndexController extends HomeController {
         $this->assign('focus',"宠物定位贴");
         $this->display();
     }
+    public function product_goods(){
+        $this->assign('focus',"物品定位贴");
+        $this->display();
+    }
 
     public function law(){
         $this->assign('focus',"关于钦家");

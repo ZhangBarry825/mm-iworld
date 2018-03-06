@@ -1606,31 +1606,107 @@ body {
   .elder-head {
     width: 1000px;
     margin: 0 auto;
-    height: 430px;
+    height: 500px;
     margin-top: 30px;
     margin-bottom: 100px;
     .elder-left {
-      width: 440px;
+      width: 560px;
       float: left;
       padding-top: 30px;
+      z-index: 100;
     }
     .elder-left h3 {
-      font-size: 40px;
+      margin-top: 80px;
+      font-size: 35px;
+      padding-bottom: 55px;
+      font-weight: normal;
+      z-index: 100;
+      float: left;
+      margin-left: 20px;
+    }
+    .elder-left h4 {
+      word-break: keep-all;
+      font-size: 25px;
       padding-bottom: 20px;
       font-weight: normal;
+      margin-left: 20px;
+      margin-top: 20px;
+      z-index: 1;
+      float: left;
+      clear: left;
+      position: relative;
+      top: 10px;
     }
+
     .elder-left p {
-      font-size: 20px;
+      margin-top: 20px;
+      font-size: 16px;
+      word-spacing: 15px;
       line-height: 1.5;
+      margin-left: 20px;
+      width: 470px;
+      z-index: 12;
+      float: left;
+      clear: left;
+      text-align: justify;
+      position: relative;
+    }
+    .elder-left .pets{
+      margin-top: 20px;
+      font-size: 19px;
+      word-spacing: 20px;
+      line-height: 1.5;
+      margin-left: 20px;
+      width: 470px;
+      z-index: 12;
+      float: left;
+      clear: left;
+      text-align: justify;
+    }
+    .elder-left .elder{
+      margin-top: 20px;
+      font-size: 19px;
+      word-spacing: 15px;
+      margin-left: 20px;
+      line-height: 1.5;
+      width: 670px;
+      z-index: 12;
+      float: left;
+      clear: left;
+      text-align: justify;
+    }
+    .elder-left .goods{
+      margin-top: 20px;
+      font-size: 19px;
+      word-spacing: 15px;
+      margin-left: 20px;
+      line-height: 1.5;
+      width: 440px;
+      z-index: 12;
+      float: left;
+      clear: left;
+      text-align: justify;
+    }
+    .elder-left span{
+      color: red;
     }
     .elder-pic {
-      width: 449px;
-      height: 430px;
+      width: 439px;
+      height: 410px;
       float: right;
+      z-index: -12;
+    }
+    .elder-pic-pet{
+      width: 368px;
+      height: 435px;
+      float: right;
+      z-index: -12;
     }
     .elder-pic img {
       width: 100%;
       height: 100%;
+      float: right;
+      z-index: -1;
     }
   }
   .elder-pic:after{
@@ -1644,13 +1720,46 @@ body {
     clear: both;
   }
   .elder-status {
-    height: 365px;
+    height: 750px;
     border-top: 1px solid #e9e9e9;
     border-bottom: 1px solid #e9e9e9;
     background-color: #fafafa;
     .status-content {
       width: 1000px;
+      height: 750px;
       margin: 0 auto;
+      .elder-status-img{
+        width: 100%;
+        height: 200px;
+        margin-top: 70px;
+
+        .jiantou{
+          width: 60px;
+          float: left;
+          margin-top: 57px;
+        }
+        .elder-status-imgself{
+          text-align: center;
+          width: 200px;
+          height: 200px;
+          float: left;
+        }
+        .elder-status-imgself p{
+          margin-top: 50px;
+          position: relative;
+          top: -25px;
+          //font-weight: 500;
+        }
+        .elder-status-imgself img{
+          width: 180px;
+          height: 120px;
+        }
+      }
+      .elder-status-img .elder-bottom{
+        width: 100%;
+        height: 30px;
+        background-color: salmon;
+      }
       .status-items {
         height: 130px;
         margin-top: 60px;
@@ -1680,14 +1789,120 @@ body {
         }
       }
     }
+    .status-content p{
+      //margin-top: 50px;
+      font-size: 18px;
+      line-height: 25px;
+      //font-weight: 500;
+    }
+    .status-content .elderp{
+      //margin-top: 50px;
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 25px;
+      //font-weight: 500;
+    }
     .status-content h2 {
       font-size: 30px;
       font-weight: normal;
       text-align: center;
-      padding-top: 50px;
+      padding-top: 80px;
+    }
+    .status-content .elder-h2 {
+      font-size: 30px;
+      font-weight: normal;
+      text-align: center;
+      padding-top: 80px;
+      padding-bottom: 50px;
+      margin: 0;
+    }
+    .status-content .elder-bottom {
+      width: 100%;
+      height: 70px;
+      line-height: 1.5;
+      color: grey;
+      font-size: 19px;
+    }
+  }
+  .goods-status-goods {
+    height: 380px;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+    background-color: #fafafa;
+    .status-content {
+      width: 1000px;
+      height: 750px;
+      margin: 0 auto;
+      .elder-status-img{
+        width: 100%;
+        height: 200px;
+        margin-top: 70px;
+        .jiantou{
+          width: 60px;
+          float: left;
+          margin-top: 50px;
+        }
+        .elder-status-imgself{
+          text-align: center;
+          width: 200px;
+          height: 200px;
+          float: left;
+        }
+        .elder-status-imgself p{
+          position: relative;
+          top: -25px;
+          //font-weight: 500;
+        }
+        .elder-status-imgself img{
+          width: 180px;
+          height: 120px;
+        }
+      }
+
+      .status-items {
+        height: 130px;
+        margin-top: 60px;
+        .status-item {
+          float: left;
+          width: 190px;
+          height: 40px;
+          padding: 45px 20px;
+          background-color: #FFFFFF;
+          transition: box-shadow 0.25s;
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05), 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+          text-align: center;
+          position: relative;
+        }
+        .status-item img {
+          position: absolute;
+          left: 90px;
+          top: -20px;
+
+        }
+        .status-item p {
+          font-size: 15px;
+          color: #888888;
+        }
+        .status-item ~ .status-item {
+          margin-left: 20px;
+        }
+      }
+    }
+    .status-content p{
+      //margin-top: 50px;
+      font-size: 18px;
+      line-height: 25px;
+      //font-weight: 500;
+    }
+    .status-content h2 {
+      font-size: 30px;
+      font-weight: normal;
+      text-align: center;
+      padding-top: 80px;
     }
   }
   .elder-product {
+    padding-top: 50px;
     width: 1000px;
     margin: 0 auto;
     margin-bottom: 50px;
@@ -1719,11 +1934,146 @@ body {
         padding-bottom: 30px;
       }
       .product-right p {
-        font-size: 17px;
+        font-size: 18px;
         line-height: 1.5;
         color: #777777;
       }
     }
+    .elder-product-box{
+      width: 1000px;
+      margin: 0 auto;
+      margin-top: 30px;
+      height: 180px;
+      padding-bottom: 30px;
+      .elder-product-boxself{
+        float: left;
+        margin-left: 13px;
+        background-color: #f9f9f9;
+        padding:20px;
+        box-sizing: border-box;
+        width: 320px;
+        height: 100%;
+      }
+      .elder-product-boxself h3{
+        font-size: 22px;
+        color:indianred;
+        font-weight: normal;
+        text-align: center;
+        margin: 0 auto;
+      }
+      .elder-product-boxself p{
+        font-size: 15px;
+        text-align: left;
+        font-weight: normal;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+    }
+  }
+  .product-meaning{
+    width: 1000px;
+    margin: 0 auto;
+    height: 700px;
+    .product-meaning-anli{
+      width: 100%;
+      margin-top: 40px;
+      float: left;
+      .product-meaning-anli-title{
+        float: left;
+        width: 900px;
+        font-size: 20px;
+        color: grey;
+      }
+      .product-meaning-img{
+        margin-top: 10px;
+        text-align: center;
+        width: 250px;
+        height: 270px;
+        float: left;
+      }
+      .product-meaning-img p{
+        margin: 15px auto;
+        width: 230px;
+        font-size: 18px;
+        text-align: left;
+        color: grey;
+      }
+    }
+
+  }
+  .product-meaning h2{
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 80px;
+  }
+  .product-meaning p{
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 25px;
+    //font-weight: 500;
+  }
+  .product-ptfw{
+    width: 1000px;
+    margin: 0 auto;
+    height: 570px;
+    .product-ptfw-box{
+      margin-top: 50px;
+      width: 100%;
+      height: 340px;
+      .product-ptfw-boxself{
+        float: left;
+        width: 485px;
+        height: 140px;
+        box-shadow: 0 1px 10px #b6b6b6, 0 0 0 #b6b6b6, 0 0 0 #b6b6b6;
+        .product-ptfw-boxself-left{
+          text-align: center;
+          width: 70px;
+          height: 100%;
+          float: left;
+        }
+        .product-ptfw-boxself-left img{
+          margin-top: 20px;
+        }
+        .product-ptfw-boxself-right{
+          width: 400px;
+          padding: 10px;
+          box-sizing: border-box;
+          float: left;
+          height: 100%;
+          .one{
+            margin-top: 15px;
+            font-size: 20px;
+          }
+          .hr{
+            width: 50px;
+            border-bottom: 3px solid indianred;
+          }
+          .two{
+            margin-top: 10px;
+            font-size: 16px;
+            color: grey;
+            line-height: 22px;
+          }
+        }
+      }
+      .product-ptfw-boxself.two{
+        margin-left: 20px;
+      }
+      .product-ptfw-boxself.three,.product-ptfw-boxself.four{
+        margin-top: 25px;
+      }
+      .product-ptfw-boxself.four{
+        margin-left: 20px;
+      }
+    }
+  }
+  .product-ptfw h2{
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   .elder-product h2 {
     font-size: 30px;
@@ -1731,6 +2081,48 @@ body {
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+  .product-situation{
+    width: 1000px;
+    margin: 0 auto;
+    height: 400px;
+    .product-situation-box{
+      float: left;
+      margin-left: 17.5px;
+      overflow: hidden;
+      width: 310px;
+      height: 210px;
+      border-radius: 15px;
+      position:relative;
+      .product-situation-bottom{
+        display: block;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        color: whitesmoke;
+        background :rgba(0,0,0,0.5);
+        font-size: 22px;
+        line-height: 2.2;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    .product-situation-box.one{
+      background-image: url("../image/p01.png");
+    }
+    .product-situation-box.two{
+      background-image: url("../image/p02.png");
+    }
+    .product-situation-box.three{
+      background-image: url("../image/p03.png");
+    }
+  }
+  .product-situation h2{
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
   }
   .product-connect{
     width: 1000px;
@@ -1755,8 +2147,8 @@ body {
         padding-top: 10px;
         color: #333333;
       }
-      .connect-item~.connect-item{
-        margin-left: 3.33%;
+      .connect-item{
+        margin-left: 2.5%;
       }
       .connect-item img{
         width: 100%;
@@ -1771,6 +2163,8 @@ body {
     padding-bottom: 30px;
   }
 }
+
+
 
 .lists-container {
   .onethink.fenye div > a, .onethink.fenye div > span {

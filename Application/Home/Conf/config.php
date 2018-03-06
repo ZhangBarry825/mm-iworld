@@ -106,6 +106,7 @@ return array(
         'product_child' => 'Index/product_child?_',
         'product_elder' => 'Index/product_elder?_',
         'product_pet' => 'Index/product_pet?_',
+        'product_goods' => 'Index/product_goods?_',
         'rescue' => 'Index/rescue?_',
         'technology' => 'Index/technology?_',
         'law' => 'Index/law?_',
