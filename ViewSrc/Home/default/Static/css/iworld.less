@@ -412,10 +412,12 @@ body {
         .pane-content p {
           color: #999999;
           font-size: 15px;
-          text-align: justify;
+          text-align: center;
+          line-height: 25px;
+          margin-top:10px;
         }
         .pane-btn {
-          margin-top: 50px;
+          margin-top: 30px;
           text-align: center;
         }
         .pane-content a {
@@ -497,7 +499,7 @@ body {
       .app-body {
         width: 1200px;
         height: 667px;
-        background-image: url("../image/range.gif");
+        background-image: url("../image/range01.gif");
         background-position: center;
         .app-number {
           padding-top: 80px;
@@ -1335,7 +1337,8 @@ body {
 }
 
 .patent-container {
-  width: 900px;
+  width: 1000px;
+  height: 700px;
   margin: 0 auto;
   .patent-head {
     text-align: center;
@@ -1374,7 +1377,18 @@ body {
     color: #666666;
   }
   .patent-content img{
-    width: 100%;
+    float: right;
+    width: 800px;
+  }
+  .patent-content-text{
+    font-weight: normal;
+    line-height: 2;
+    margin-top: 200px;
+    font-size: 25px;
+    text-align: center;
+    width: 200px;
+    float: left;
+
   }
 }
 
@@ -1624,6 +1638,10 @@ body {
       float: left;
       margin-left: 20px;
     }
+    .child-left h3{
+      margin-top: 30px;
+      padding-bottom: 35px;
+    }
     .elder-left h4 {
       word-break: keep-all;
       font-size: 25px;
@@ -1719,8 +1737,9 @@ body {
     display: block;
     clear: both;
   }
+
   .elder-status {
-    height: 750px;
+    height: 380px;
     border-top: 1px solid #e9e9e9;
     border-bottom: 1px solid #e9e9e9;
     background-color: #fafafa;
@@ -1778,7 +1797,116 @@ body {
           position: absolute;
           left: 90px;
           top: -20px;
+        }
+        .status-item .cwd{
+          width: 40px;height: 47px
+        }
+        .status-item p {
+          font-size: 15px;
+          color: #888888;
+        }
+        .status-item ~ .status-item {
+          margin-left: 20px;
+        }
+      }
+    }
+    .status-content p{
+      //margin-top: 50px;
+      font-size: 18px;
+      line-height: 25px;
+      //font-weight: 500;
+    }
+    .status-content .elderp{
+      //margin-top: 50px;
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 25px;
+      //font-weight: 500;
+    }
+    .status-content h2 {
+      font-size: 30px;
+      font-weight: normal;
+      text-align: center;
+      padding-top: 80px;
+    }
+    .status-content .elder-h2 {
+      font-size: 30px;
+      font-weight: normal;
+      text-align: center;
+      padding-top: 80px;
+      padding-bottom: 50px;
+      margin: 0;
+    }
+    .status-content .elder-bottom {
+      width: 100%;
+      height: 70px;
+      line-height: 1.5;
+      color: grey;
+      font-size: 19px;
+    }
+  }
+  .old-status {
+    height: 710px;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+    background-color: #fafafa;
+    .status-content {
+      width: 1000px;
+      height: 750px;
+      margin: 0 auto;
+      .elder-status-img{
+        width: 100%;
+        height: 200px;
+        margin-top: 70px;
 
+        .jiantou{
+          width: 60px;
+          float: left;
+          margin-top: 57px;
+        }
+        .elder-status-imgself{
+          text-align: center;
+          width: 200px;
+          height: 200px;
+          float: left;
+        }
+        .elder-status-imgself p{
+          margin-top: 50px;
+          position: relative;
+          top: -25px;
+          //font-weight: 500;
+        }
+        .elder-status-imgself img{
+          width: 180px;
+          height: 120px;
+        }
+      }
+      .elder-status-img .elder-bottom{
+        width: 100%;
+        height: 30px;
+        background-color: salmon;
+      }
+      .status-items {
+        height: 130px;
+        margin-top: 60px;
+        .status-item {
+          float: left;
+          width: 190px;
+          height: 40px;
+          padding: 45px 20px;
+          background-color: #FFFFFF;
+          transition: box-shadow 0.25s;
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05), 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+          text-align: center;
+          position: relative;
+        }
+        .status-item img {
+          position: absolute;
+          left: 90px;
+          top: -20px;
+        }
+        .status-item .cwd{
+          width: 40px;height: 47px
         }
         .status-item p {
           font-size: 15px;
@@ -1872,6 +2000,13 @@ body {
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05), 0 2px 3px 0 rgba(0, 0, 0, 0.05);
           text-align: center;
           position: relative;
+          .cwd{
+            width: 100px;
+            height: 90px;
+            position: absolute;
+            left: 65px;
+            top: -50px;
+          }
         }
         .status-item img {
           position: absolute;
@@ -2108,13 +2243,19 @@ body {
       }
     }
     .product-situation-box.one{
-      background-image: url("../image/p01.png");
+      background-image: url("../image/p001.jpg");
+      background-position: center;
+      background-size: cover;
     }
     .product-situation-box.two{
-      background-image: url("../image/p02.png");
+      background-image: url("../image/p002.jpg");
+      background-position: center;
+      background-size: cover;
     }
     .product-situation-box.three{
-      background-image: url("../image/p03.png");
+      background-image: url("../image/p003.jpg");
+      background-position: center;
+      background-size: cover;
     }
   }
   .product-situation h2{
